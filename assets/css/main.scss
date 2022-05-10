@@ -1,0 +1,52 @@
+html, body {display: block;overflow: hidden !important;margin: 0;padding: 0;}
+html, body,
+#__nuxt,
+#__layout,
+.v-application,
+.v-application--wrap,
+.v-main,
+.v-main__wrap,
+.v-main__wrap > .container {height: 100% !important;}
+.v-main__wrap,
+.v-main__wrap > .container {overflow: auto; overflow-x: hidden;}
+//
+::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);background-color: #f5f5f5;border-radius: 3px;}
+::-webkit-scrollbar {width: 6px; height: 6px; background-color: #f5f5f5;}
+::-webkit-scrollbar-thumb {background-color: #7a8ef5;border-radius: 3px;}
+//
+.no-selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+//
+table {width: 100%; border: none; padding: 0;margin: 0 auto; border-collapse: collapse; border-spacing: 0;}
+//
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
+    opacity: 0;
+}
+//
+.full-height-content-wrap {display: flex; flex-direction: column; height: 100%; overflow: hidden;
+    > div {width: 100%; position: relative; z-index: 1;}
+    .full-height-title { z-index: 3;}
+    .full-height-content {overflow: auto; overflow-x: hidden; z-index: 2; flex: 1;}
+    .o-hidden {overflow: hidden}
+}
+.tab-full-height {height: 100%;
+    .v-window__container,
+    .v-window-item {height: 100%;overflow: auto;overflow-x: hidden;}
+}
+body [transparent],
+body .transparent {background: transparent;
+    &.v-tabs > .v-tabs-bar {background: transparent;}
+}
+.v-application .json-code-editor .ace_editor {min-height: 300px; border-bottom: 1px solid #ddd;}
+// IMPORT STYLES
+@import "./toast";
