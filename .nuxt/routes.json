@@ -2,36 +2,36 @@
   {
     "name": "account",
     "path": "/account",
-    "component": "/home/it/base-nuxt/pages/account/index.vue",
+    "component": "/home/it/projects/base-nuxt/pages/account/index.vue",
     "chunkName": "pages/account/index",
-    "_name": "_abcac340"
+    "_name": "_0405d285"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "/home/it/base-nuxt/pages/login/index.vue",
+    "component": "/home/it/projects/base-nuxt/pages/login/index.vue",
     "chunkName": "pages/login/index",
-    "_name": "_291d1e9c"
+    "_name": "_34211801"
   },
   {
     "name": "registration",
     "path": "/registration",
-    "component": "/home/it/base-nuxt/pages/registration/index.vue",
+    "component": "/home/it/projects/base-nuxt/pages/registration/index.vue",
     "chunkName": "pages/registration/index",
-    "_name": "_34abd23c"
+    "_name": "_50c46d37"
   },
   {
     "name": "settings",
     "path": "/settings",
-    "component": "/home/it/base-nuxt/pages/settings.vue",
+    "component": "/home/it/projects/base-nuxt/pages/settings.vue",
     "chunkName": "pages/settings",
-    "_name": "_0f88263a"
+    "_name": "_2caff59e"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/it/base-nuxt/pages/index.vue",
+    "component": "/home/it/projects/base-nuxt/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_4cc1887c"
+    "_name": "_0fdf64e7"
   }
 ]

@@ -83,7 +83,7 @@
                     'https://kin-auth-dev.grit.software/api/kratos/public/self-service/registration/browser'
             },
             login() {
-                // this.$auth.loginWith('social')
+                this.$auth.loginWith('social')
             },
             home() {
                 this.$router.push('/')

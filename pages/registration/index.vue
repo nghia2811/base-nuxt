@@ -85,13 +85,11 @@
 
 <script lang="ts">
 import Vue from 'vue'
-// @ts-ignore
-import { v4 as uuidv4 } from 'uuid'
 
 export default Vue.extend({
     name: 'RegistrationPage',
     layout: 'registration',
-    // auth: false,
+    auth: false,
     data() {
         return {
             inputs: [
@@ -244,9 +242,9 @@ export default Vue.extend({
         }
     },
     created(){
-        // if(this.$auth.loggedIn){
-        //     this.$router.back()
-        // }
+        if(this.$auth.loggedIn){
+            this.$router.back()
+        }
     },
     mounted() {
         if (!this.$route.query.flow) {

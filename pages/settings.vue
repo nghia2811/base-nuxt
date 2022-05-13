@@ -30,8 +30,8 @@
                 // return this.$lodash.isEmpty(this.$auth.user) ? null : this.$auth.user
             },
             userToken(): any {
-                // const authInstance: any = this.$auth // prevent ide warning
-                // return authInstance.strategy.token.get()
+                const authInstance: any = this.$auth // prevent ide warning
+                return authInstance.strategy.token.get()
             }
         },
         mounted() {
