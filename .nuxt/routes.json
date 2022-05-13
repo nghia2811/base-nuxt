@@ -2,8 +2,8 @@
   {
     "name": "index",
     "path": "/",
-    "component": "/home/it/projects/base-nuxt/pages/index.vue",
+    "component": "/home/it/base-nuxt/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_0fdf64e7"
+    "_name": "_4cc1887c"
   }
 ]

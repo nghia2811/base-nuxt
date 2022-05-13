@@ -1,0 +1,27 @@
+{
+    "paymentMethod": {
+        "method": "banktransfer"
+    },
+    "billing_address": {
+        "email": "jdoe@example.com",
+        "region": "New York",
+        "region_id": 43,
+        "region_code": "NY",
+        "country_id": "US",
+        "street": [
+            "123 Oak Ave",
+            "US",
+            "New York",
+            "Doe"
+        ],
+        "number_list":[1,2,3,4,5,6],
+        "temp": [{"foo":1, "bar":14}, {"foo":2, "bar":3}],
+        "date1": "2022-04-22",
+        "date2": "2022-04-30",
+        "postcode": "10577",
+        "city": "Purchase",
+        "telephone": "512-555-1111",
+        "firstname": "Jane",
+        "lastname": "Doe"
+    }
+}
