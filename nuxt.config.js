@@ -4,10 +4,15 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
+  // env access in vue app
+  env: {
+    API_ENDPOINT           : process.env.API_ENDPOINT
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - kinitiras-select-level',
-    title: 'kinitiras-select-level',
+    titleTemplate: '%s - kinitiras',
+    title: 'kinitiras',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,7 +23,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'dns-prefetch', href: 'https://fonts.gstatic.com/'},
+      {rel: 'dns-prefetch', href: 'https://fonts.googleapis.com/'},
+      {rel: 'preconnect', href: 'https://fonts.gstatic.com'},
+      {rel: 'preconnect', href: 'https://fonts.googleapis.com'},
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap'}
     ]
   },
 
@@ -30,11 +40,26 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // base
+    {src: '~/plugins/lodash'},
+    {src: '~/configs'},
+    {src: '~/store/types'},
+    {src: '~/plugins/storage'},
+    //
+    {src: '~/plugins/i18n'}, // register i18n first
+    {src: '~/plugins/axios'},
+    {src: '~/services'},
     {src: '~/plugins/utils'},
+    {src: '~/plugins/router'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: {
+    dirs: [
+        '~/components',
+        // {path: '~/components/utils'},
+        // {path: '~/components/biz'}
+    ]
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -46,8 +71,17 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/i18n', // register i18n first
+    '@nuxtjs/axios',
     '@nuxtjs/toast'
   ],
+  axios  : {
+    baseURL: process.env.API_ENDPOINT
+  },
+  //
+  // router: {
+  //   middleware: ['auth']
+  // },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -72,6 +106,24 @@ export default {
     position      : 'top-right',
     duration      : 3000,
     containerClass: 'kinitiras-toast'
+  },
+
+  // https://i18n.nuxtjs.org/basic-usage
+  i18n: {
+    locales      : [
+        {
+            code: 'en',
+            file: 'en-US.js'
+        },
+        {
+            code: 'vi',
+            file: 'vi-VN.js'
+        }
+    ],
+    lazy         : true,
+    langDir      : 'locale/',
+    defaultLocale: 'en',
+    strategy     : 'no_prefix'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

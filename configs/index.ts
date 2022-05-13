@@ -1,18 +1,5 @@
 import { Plugin } from '@nuxt/types'
 import { types } from '~/store/types'
-import { EdgeBaseColors, BuilderContextMenu, QuickAddModulePosition, QuickAddTransitionType } from '~/builder/mixins/utils'
-import { PlatformImage, PlatformName, FieldType, EdgeType } from '~/builder/shape/configs'
-
-const eNum: any = {
-    EdgeBaseColors,
-    BuilderContextMenu,
-    QuickAddModulePosition,
-    QuickAddTransitionType,
-    PlatformImage,
-    PlatformName,
-    FieldType,
-    EdgeType
-}
 
 export const defaultConfig: any = {
     STORAGE_LANGUAGE_KEY: 'current_language'
@@ -91,7 +78,6 @@ export const httpStatus = [
 
 export const conf: any = {
     ...defaultConfig,
-    $enum       : eNum,
     $storeAction: {...types},
     httpStatus  : [...httpStatus]
 }
