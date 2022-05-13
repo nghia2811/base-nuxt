@@ -1,5 +1,33 @@
 [
   {
+    "name": "account",
+    "path": "/account",
+    "component": "/home/it/base-nuxt/pages/account/index.vue",
+    "chunkName": "pages/account/index",
+    "_name": "_abcac340"
+  },
+  {
+    "name": "login",
+    "path": "/login",
+    "component": "/home/it/base-nuxt/pages/login/index.vue",
+    "chunkName": "pages/login/index",
+    "_name": "_291d1e9c"
+  },
+  {
+    "name": "registration",
+    "path": "/registration",
+    "component": "/home/it/base-nuxt/pages/registration/index.vue",
+    "chunkName": "pages/registration/index",
+    "_name": "_34abd23c"
+  },
+  {
+    "name": "settings",
+    "path": "/settings",
+    "component": "/home/it/base-nuxt/pages/settings.vue",
+    "chunkName": "pages/settings",
+    "_name": "_0f88263a"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/it/base-nuxt/pages/index.vue",

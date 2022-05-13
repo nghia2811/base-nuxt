@@ -1,5 +1,80 @@
 {
+  "AppLocale": {
+    "description": "Auto imported from components/AppLocale.vue"
+  },
+  "ConfirmMenu": {
+    "description": "Auto imported from components/ConfirmMenu.vue"
+  },
+  "DefaultFooter": {
+    "description": "Auto imported from components/DefaultFooter.vue"
+  },
+  "DefaultHeader": {
+    "description": "Auto imported from components/DefaultHeader.vue"
+  },
+  "FormBuilder": {
+    "description": "Auto imported from components/FormBuilder.vue"
+  },
+  "FormulateAutocomplete": {
+    "description": "Auto imported from components/FormulateAutocomplete.vue"
+  },
+  "HeaderAccount": {
+    "description": "Auto imported from components/HeaderAccount.vue"
+  },
   "HeaderLogo": {
     "description": "Auto imported from components/HeaderLogo.vue"
+  },
+  "JqCheatSheet": {
+    "description": "Auto imported from components/JqCheatSheet.vue"
+  },
+  "JqSelect": {
+    "description": "Auto imported from components/JqSelect.vue"
+  },
+  "JsonEditorDialog": {
+    "description": "Auto imported from components/JsonEditorDialog.vue"
+  },
+  "LabelWithTooltip": {
+    "description": "Auto imported from components/LabelWithTooltip.vue"
+  },
+  "MainMenu": {
+    "description": "Auto imported from components/MainMenu.vue"
+  },
+  "NuxtLogo": {
+    "description": "Auto imported from components/NuxtLogo.vue"
+  },
+  "PageLoading": {
+    "description": "Auto imported from components/PageLoading.vue"
+  },
+  "PageTitle": {
+    "description": "Auto imported from components/PageTitle.vue"
+  },
+  "Pagination": {
+    "description": "Auto imported from components/Pagination.vue"
+  },
+  "ToggleButton": {
+    "description": "Auto imported from components/ToggleButton.vue"
+  },
+  "Tutorial": {
+    "description": "Auto imported from components/Tutorial.vue"
+  },
+  "VueTable": {
+    "description": "Auto imported from components/VueTable.vue"
+  },
+  "VueTableBody": {
+    "description": "Auto imported from components/VueTableBody.vue"
+  },
+  "VueTableFixedHeader": {
+    "description": "Auto imported from components/VueTableFixedHeader.vue"
+  },
+  "VueTableHeader": {
+    "description": "Auto imported from components/VueTableHeader.vue"
+  },
+  "VuetifyLogo": {
+    "description": "Auto imported from components/VuetifyLogo.vue"
+  },
+  "UserLogin": {
+    "description": "Auto imported from components/user/Login.vue"
+  },
+  "UserMenu": {
+    "description": "Auto imported from components/user/Menu.vue"
   }
 }

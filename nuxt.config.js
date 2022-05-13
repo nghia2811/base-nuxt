@@ -73,15 +73,58 @@ export default {
   modules: [
     '@nuxtjs/i18n', // register i18n first
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
     '@nuxtjs/toast'
   ],
+  auth   : {
+    redirect  : {
+        login   : '/login',
+        logout  : '/',
+        callback: '/login',
+        home    : '/'
+    },
+    strategies: {
+      social: {
+          scheme             : 'oauth2',
+          endpoints          : {
+              authorization: process.env.AUTH_API_ENDPOINT,
+              // token        : process.env.AUTH_TOKEN_ENDPOINT,
+              // register     : process.env.REGISTER_API_ENDPOINT,
+              // userInfo     : process.env.AUTH_USER_INFO_ENDPOINT,
+              // logout       : process.env.AUTH_LOGOUT_ENDPOINT
+          },
+          token              : {
+              property: 'access_token',
+              type    : 'Bearer',
+              maxAge  : 1800
+          },
+          refreshToken       : {
+              property: 'refresh_token',
+              maxAge  : 60 * 60 * 24 * 30
+          },
+          responseType       : 'code',
+          grantType          : 'authorization_code',
+          clientId           : process.env.AUTH_CLIENT_ID,
+          scope              : ['openid', 'offline', 'offline_access'],
+          codeChallengeMethod: 'S256'
+          // redirectUri        : undefined,
+          // accessType         : undefined,
+          // logoutRedirectUri  : undefined,
+          // state              : 'UNIQUE_AND_NON_GUESSABLE',
+          // responseMode       : '',
+          // acrValues          : ''
+          // autoLogout: false
+      }
+    },
+    plugins   : ['~/plugins/auth']
+  },
   axios  : {
     baseURL: process.env.API_ENDPOINT
   },
   //
-  // router: {
-  //   middleware: ['auth']
-  // },
+  router: {
+    middleware: ['auth']
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

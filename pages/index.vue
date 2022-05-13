@@ -1,221 +1,153 @@
 <template>
-  <div class="login-page d-flex">
-    <div class="login-side">
-      <svg
-        viewBox="0 0 960 540"
-        width="100%"
-        height="100%"
-        preserveAspectRatio="xMidYMax slice"
-        xmlns="http://www.w3.org/2000/svg"
-        class="login-bg-svg"
-      >
-        <g fill="none" stroke="currentColor" stroke-width="100">
-          <circle r="234" cx="196" cy="23"></circle>
-          <circle r="234" cx="790" cy="491"></circle>
-        </g>
-      </svg>
-      <svg
-        viewBox="0 0 220 192"
-        width="220"
-        height="192"
-        fill="none"
-        class="login-svg-top-right"
-      >
-        <defs>
-          <pattern
-            id="837c3e70-6c3a-44e6-8854-cc48c737b659"
-            x="0"
-            y="0"
-            width="20"
-            height="20"
-            patternUnits="userSpaceOnUse"
-          >
-            <rect x="0" y="0" width="4" height="4" fill="currentColor"></rect>
-          </pattern>
-        </defs>
-        <rect
-          width="220"
-          height="192"
-          fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"
-        ></rect>
-      </svg>
-      <div class="login-form">
-        <div class="sign-in-logo d-flex justify-center">
-          <header-logo/>
+    <div class="homepage-content">
+        <div class="home-top">
+            <v-container>
+                <h4 class="text-h5 font-weight-medium primary--text">The Operating System for Business Operations</h4>
+                <br>
+                <h1 class="text-h3 font-weight-bold">The Enterprise Standard for<br>No-Code Process Orchestration</h1>
+                <br>
+                <div class="d-flex justify-center checkmark">
+                    <div>
+                        <v-icon color="green darken-1">mdi-check</v-icon>
+                        <span class="teal--text text--lighten-1">100% No Code</span>
+                    </div>
+                    <div>
+                        <v-icon color="green darken-1">mdi-check</v-icon>
+                        <span class="teal--text text--lighten-1">No More Apps</span>
+                    </div>
+                    <div>
+                        <v-icon color="green darken-1">mdi-check</v-icon>
+                        <span class="teal--text text--lighten-1">No Change Management</span>
+                    </div>
+                </div>
+                <br><br><br>
+                <v-btn class="get-started-btn" color="primary" large depressed @click="()=> $router.push('/builder')">Get Started</v-btn>
+            </v-container>
         </div>
-        <div class="select-container">
-          <v-text-field v-model="inputToken" label="Token"></v-text-field>
-          <!-- <h2 class="text-center">Select Level</h2> -->
-          <!-- <v-autocomplete
-            v-model="autocompleteModel"
-            :items="autocompleteData"
-            @input="selectedPath($event)"
-            dense
-            outlined
-            label="Level"
-            class="mt-5"
-            hide-details
-            hide-no-data
-          ></v-autocomplete> -->
-          <v-btn @click="approval" color="blue-grey darken-3" dark block class="mt-8 mb-5">
-            Approve
-          </v-btn>
-          <v-btn @click="reject" color="blue-grey darken-3" block outlined class="mt-5 mb-5">
-            Reject
-          </v-btn>
+        <div class="bridge-block-content">
+            <v-container>
+                <h2 class="text-h4 font-weight-bold">The Bridge Between Business & IT</h2>
+                <div class="d-flex justify-center bridge-info">
+                    <div class="for-business">
+                        <h3 class="text-h5 font-weight-bold">For Business<br><span class="primary--text">Operations</span></h3>
+                        <br>
+                        Automate any business process, no code or change management required.
+                        <img alt="no-code" :src="require(`~/assets/image/home/business.png`)"/>
+                    </div>
+                    <div class="for-technology">
+                        <h3 class="text-h5 font-weight-bold">For Business<br><span class="teal--text text--lighten-2">Technology</span></h3>
+                        <br>
+                        Create a standard that improves both governance and business agility.
+                        <img alt="no-code" :src="require(`~/assets/image/home/it.png`)"/>
+                    </div>
+                </div>
+            </v-container>
         </div>
-      </div>
-      <div class="footer">
-        @kincloud2022
-      </div>
+        <div class="highlight-feature-block">
+            <v-container>
+                <h2 class="text-h4 font-weight-bold">Everything you need to drive operational efficiency</h2>
+                <br>
+                <p class="teal--text text--lighten-1">
+                    {{ appName }} enables enterprises to scale automation, reduce IT burden,<br>
+                    and deliver millions in ROI—with time-to-value in days.
+                </p>
+                <ul class="d-flex justify-center list-feature">
+                    <li>
+                        <div class="feature-item">
+                            <img alt="no-code" :src="require(`~/assets/image/home/No-Code.png`)"/>
+                            <div>100% No-Code</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-item">
+                            <img alt="Fully Composable" :src="require(`~/assets/image/home/Composable.png`)"/>
+                            <div>Fully Composable</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-item">
+                            <img alt="Human-In-The-Loop" :src="require(`~/assets/image/home/Accessibility.png`)"/>
+                            <div>Human-In-The-Loop</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-item">
+                            <img alt="Handle Any Complexity" :src="require(`~/assets/image/home/Complexity.png`)"/>
+                            <div>Handle Any<br>Complexity</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-item">
+                            <img alt="Rapid & Iterative Development" :src="require(`~/assets/image/home/Agile.png`)"/>
+                            <div>Rapid & Iterative<br>Development</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="feature-item">
+                            <img alt="Enterprise-Grade Governance" :src="require(`~/assets/image/home/Data-Governance.png`)"/>
+                            <div>Enterprise-Grade<br>Governance</div>
+                        </div>
+                    </li>
+                </ul>
+            </v-container>
+        </div>
+        <div class="get-started">
+            <v-container>
+                <h2 class="text-h4 font-weight-bold">Interested?</h2>
+                <br><br>
+                <v-btn class="get-started-btn" color="primary" large depressed @click="()=> $router.push('/builder')">Get Started</v-btn>
+            </v-container>
+        </div>
     </div>
-  </div>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  import axios from 'axios'
-
-  export default Vue.extend({
-    name  : 'HomePage',
-    layout: 'home',
-    data() {
-      return {
-        autocompleteModel: '',
-        autocompleteData : [
-          '1',
-          '2',
-          '3',
-          '4',
-          '5'
-        ] as any,
-        taskToken        : '' as any,
-        inputToken       : ''
-      }
-    },
-    mounted() {
-      if (this.$route.query.token) {
-        this.taskToken = this.$route.query.token
-      }
-    },
-    methods: {
-      approval() {
-        axios
-            .post('https://kin-api-dev.grit.software/sample/workflow/complete-activity', {
-                task_token: this.inputToken || this.taskToken,
-                activity_result: {
-                    status: "approved"
-                }
-            })
-            .then(response => {
-                this.$toast.show('Approve successfully')
-            })
-            .catch(error => {
-                this.$toast.show(error.response.data.message)
-            });;
-      },
-      reject() {
-        axios
-            .post('https://kin-api-dev.grit.software/sample/workflow/complete-activity', {
-                task_token: this.inputToken || this.taskToken,
-                activity_result: {
-                    status: "rejected"
-                }
-            })
-            .then(response => {
-                this.$toast.show('Reject successfully')
-            })
-            .catch(error => {
-                this.$toast.show(error.response.data.message)
-            });
-      },
-      selectedPath(path: any) {
-
-      }
+<script>
+    export default {
+        name: 'IndexPage',
+        auth: false,
+        data() {
+            return {
+                appName: 'Kinitiras'
+            }
+        },
+        mounted() {
+            this.$services.app.hideLoading()
+        }
     }
-  })
 </script>
 
 <style lang="scss">
-  .login-page {
-    height: 100vh;
-    position: relative;
-    .login-side {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background: rgb(30, 41, 59);
-      color: #fff;
-      > svg {
-        margin: 0;
-        opacity: 0.04;
-      }
-      .login-bg-svg {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .login-svg-top-right {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 1;
-      }
-      .login-form {
-        z-index: 2;
-        width: 365px;
-        .select-container {
-          padding: 30px 20px;
-          margin-top: 40px;
-          border-radius: 15px;
-          background: #fff;
-          color: #000;
+    .homepage-content { text-align: center;
+        .home-top {display: block;padding: 80px 0;
+            .checkmark { flex-wrap: wrap;
+                > div {padding: 0 20px;}
+            }
         }
-      }
-      .footer {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+        .bridge-block-content {display: block;background: #f7f8fb; padding: 80px 0;
+            .bridge-info { margin-top: 50px; text-align: left;
+                .for-business,
+                .for-technology {position: relative;width: auto;max-width: 300px;background: #fff;border-radius: 15px; margin: 0 20px; height: auto;min-height: 300px; padding: 35px; box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+                    img {position: absolute; top: -120px; width: 200px;display: block;margin: 0;height: auto;}
+                }
+                .for-business {
+                    img {right: 100%; margin-right: -50px;}
+                }
+                .for-technology {
+                    img {left: 100%; margin-left: -50px;}
+                }
+            }
+        }
+        .highlight-feature-block {display: block; padding: 80px 0 60px; max-width: 1200px; margin: 0 auto;
+            .list-feature { list-style: none; margin: 50px 0 0 0; padding: 0; flex-wrap: wrap; line-height: 1.5;
+                > li {width: 100%;padding: 20px; max-width: 360px;
+                    > div {display: block; border-radius: 15px;border: 1px solid #eee; padding: 30px 15px; font-weight: 500; font-size: 22px;}
+                    .feature-item {display: block; box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+                        > div {display: block;margin-top: 30px;}
+                    }
+                    img {display: block;width: auto;height: 100px;margin: 0 auto;}
+                }
+            }
+        }
+        .get-started {display: block;background: #f7f8fb; padding: 80px 0; }
     }
-  }
-  @media screen and (max-width: 1023px) {
-    .v-application div.login-page {
-      display: block !important;
-      .login-side {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .login-bg-svg {
-          height: 100vh;
-          min-height: 600px;
-        }
-        .login-svg-top-right {
-          height: auto;
-          max-width: 150px;
-        }
-        .login-form {
-          width: 100%;
-          max-width: 365px;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .v-application div.login-page {
-      .login-side {
-        .login-bg-svg {
-          height: 100vh;
-        }
-      }
-    }
-  }
 </style>
