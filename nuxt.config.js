@@ -107,13 +107,6 @@ export default {
           clientId           : process.env.AUTH_CLIENT_ID,
           scope              : ['openid', 'offline', 'offline_access'],
           codeChallengeMethod: 'S256'
-          // redirectUri        : undefined,
-          // accessType         : undefined,
-          // logoutRedirectUri  : undefined,
-          // state              : 'UNIQUE_AND_NON_GUESSABLE',
-          // responseMode       : '',
-          // acrValues          : ''
-          // autoLogout: false
       }
     },
     plugins   : ['~/plugins/auth']

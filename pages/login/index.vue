@@ -79,8 +79,7 @@
         },
         methods: {
             register() {
-                window.location.href =
-                    'https://kin-auth-dev.grit.software/api/kratos/public/self-service/registration/browser'
+               this.$router.push('/register')
             },
             login() {
                 this.$auth.loginWith('social')
@@ -88,14 +87,6 @@
             home() {
                 this.$router.push('/')
             },
-            dec2hex(dec: any) {
-                return ('0' + dec.toString()).substr(-2)
-            },
-            generateRandomString() {
-                let array = new Uint32Array(56 / 2)
-                window.crypto.getRandomValues(array)
-                return Array.from(array, this.dec2hex).join('')
-            }
         }
     })
 </script>

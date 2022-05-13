@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <br><br><br>
-                <v-btn class="get-started-btn" color="primary" large depressed @click="()=> $router.push('/builder')">Get Started</v-btn>
+                <v-btn class="get-started-btn" color="primary" large depressed @click="()=> $router.push('/login')">Get Started</v-btn>
             </v-container>
         </div>
         <div class="bridge-block-content">
