@@ -14,13 +14,6 @@
     "_name": "_34211801"
   },
   {
-    "name": "register",
-    "path": "/register",
-    "component": "/home/it/projects/base-nuxt/pages/register/index.vue",
-    "chunkName": "pages/register/index",
-    "_name": "_6e15a021"
-  },
-  {
     "name": "settings",
     "path": "/settings",
     "component": "/home/it/projects/base-nuxt/pages/settings.vue",

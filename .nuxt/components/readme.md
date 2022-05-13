@@ -10,8 +10,6 @@ You can directly use them in pages and other components without the need to impo
 - `<ConfirmMenu>` | `<confirm-menu>` (components/ConfirmMenu.vue)
 - `<DefaultFooter>` | `<default-footer>` (components/DefaultFooter.vue)
 - `<DefaultHeader>` | `<default-header>` (components/DefaultHeader.vue)
-- `<FormBuilder>` | `<form-builder>` (components/FormBuilder.vue)
-- `<FormulateAutocomplete>` | `<formulate-autocomplete>` (components/FormulateAutocomplete.vue)
 - `<HeaderAccount>` | `<header-account>` (components/HeaderAccount.vue)
 - `<HeaderLogo>` | `<header-logo>` (components/HeaderLogo.vue)
 - `<JqCheatSheet>` | `<jq-cheat-sheet>` (components/JqCheatSheet.vue)

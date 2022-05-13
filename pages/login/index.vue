@@ -73,7 +73,7 @@
 
     export default Vue.extend({
         name  : 'LoginPage',
-        layout: 'login',
+        layout: 'empty',
         mounted() {
             this.$services.app.hideLoading()
         },
